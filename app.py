@@ -1331,31 +1331,6 @@ def compare_pdf_redirect():
 def serve_robots():
     return send_from_directory(BASE_DIR, 'robots.txt', mimetype='text/plain')
 
-@app.route('/sitemap.xml')
-def serve_sitemap():
-    root = "https://ilovespdfs.in"
-    xml = ['<?xml version="1.0" encoding="UTF-8"?>',
-           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
-    
-    for slug in SLUG_TO_FILE:
-        path = f"/{slug}" if slug else ""
-        xml.append('  <url>')
-        xml.append(f'    <loc>{root}{path}</loc>')
-        xml.append('    <changefreq>daily</changefreq>')
-        xml.append('    <priority>0.9</priority>')
-        xml.append('  </url>')
-        
-        for lang in SUPPORTED_LANGS:
-            if lang != 'en':
-                path_lang = f"/{lang}/{slug}" if slug else f"/{lang}"
-                xml.append('  <url>')
-                xml.append(f'    <loc>{root}{path_lang}</loc>')
-                xml.append('    <changefreq>daily</changefreq>')
-                xml.append('    <priority>0.8</priority>')
-                xml.append('  </url>')
-                
-    xml.append('</urlset>')
-    return "\n".join(xml), 200, {'Content-Type': 'application/xml'}
 
 @app.after_request
 def add_header(response):

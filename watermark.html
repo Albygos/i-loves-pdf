@@ -185,7 +185,7 @@
     <!-- Header Navigation -->
     <header>
         <div class="navbar">
-            <div class="logo-container" onclick="window.location.href="/"" id="logo-branding">
+            <div class="logo-container" onclick="window.location.href='/'" id="logo-branding">
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
                 </svg>
@@ -199,14 +199,14 @@
             </button>
             
             <ul class="nav-menu" id="nav-links">
-                <li class="nav-item" onclick="window.location.href="/"">Home</li>
+                <li class="nav-item" onclick="window.location.href='/'">Home</li>
                 <li class="nav-item dropdown" id="dropdown-convert">
                     Convert PDF
                     <div class="dropdown-menu">
-                        <a href="/word_to_pdf">Word to PDF</a>
-                        <a href="/jpg_to_pdf">JPG to PDF</a>
-                        <a href="/pdf_to_word">PDF to Word</a>
-                        <a href="/pdf_to_jpg">PDF to JPG</a>
+                        <a href="/word-to-pdf">Word to PDF</a>
+                        <a href="/jpg-to-pdf">JPG to PDF</a>
+                        <a href="/pdf-to-word">PDF to Word</a>
+                        <a href="/pdf-to-jpg">PDF to JPG</a>
                         <a href="/html-to-pdf">HTML to PDF</a>
                         <a href="/extract-text">Extract Text</a>
                     </div>
@@ -214,16 +214,16 @@
                 <li class="nav-item dropdown" id="dropdown-all">
                     All Tools
                     <div class="dropdown-menu">
-                        <a href="/merge_pdf">Merge PDF</a>
-                        <a href="/split_pdf">Split PDF</a>
-                        <a href="/compress_pdf">Compress PDF</a>
-                        <a href="/rotate_pdf">Rotate PDF</a>
-                        <a href="/protect-pdf">Protect PDF</a>
-                        <a href="/unlock_pdf">Unlock PDF</a>
-                        <a href="/pdf_add_watermark">Add Watermark</a>
-                        <a href="/add_pdf_page_number">Page Numbers</a>
-                        <a href="/organize-pdf">Organize PDF</a>
-                        <a href="/remove-pages">Delete Pages</a>
+                        <a href="/merge">Merge PDF</a>
+                        <a href="/split">Split PDF</a>
+                        <a href="/compress">Compress PDF</a>
+                        <a href="/rotate">Rotate PDF</a>
+                        <a href="/protect">Protect PDF</a>
+                        <a href="/unlock">Unlock PDF</a>
+                        <a href="/watermark">Add Watermark</a>
+                        <a href="/page-numbers">Page Numbers</a>
+                        <a href="/organize">Organize PDF</a>
+                        <a href="/delete-pages">Delete Pages</a>
                     </div>
                 </li>
             </ul>
@@ -239,7 +239,7 @@
     <main>
         <div id="workspace-container" class="workspace">
             <div class="back-btn-container">
-                <button class="back-btn" onclick="window.location.href="/"" id="workspace-back-btn">
+                <button class="back-btn" onclick="window.location.href='/'" id="workspace-back-btn">
                     <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
                     Back to all tools
                 </button>
@@ -348,7 +348,7 @@
                 
                 <div class="success-actions">
                     <span class="success-action-link" onclick="resetActiveWorkspace()">Process another document</span>
-                    <span class="success-action-link" onclick="window.location.href="/"">Back to Home page</span>
+                    <span class="success-action-link" onclick="window.location.href='/'">Back to Home page</span>
                 </div>
             </div>
         </div>
@@ -458,24 +458,24 @@
             <div class="footer-links-grid">
                 <div class="footer-links-col">
                     <div class="footer-col-title">PDF Tools</div>
-                    <a href="/merge_pdf">Merge PDF</a>
-                    <a href="/split_pdf">Split PDF</a>
-                    <a href="/compress_pdf">Compress PDF</a>
-                    <a href="/remove-pages">Delete Pages</a>
+                    <a href="/merge">Merge PDF</a>
+                    <a href="/split">Split PDF</a>
+                    <a href="/compress">Compress PDF</a>
+                    <a href="/delete-pages">Delete Pages</a>
                 </div>
                 <div class="footer-links-col">
                     <div class="footer-col-title">Converters</div>
-                    <a href="/word_to_pdf">Word to PDF</a>
-                    <a href="/pdf_to_word">PDF to Word</a>
-                    <a href="/jpg_to_pdf">JPG to PDF</a>
-                    <a href="/pdf_to_jpg">PDF to JPG</a>
+                    <a href="/word-to-pdf">Word to PDF</a>
+                    <a href="/pdf-to-word">PDF to Word</a>
+                    <a href="/jpg-to-pdf">JPG to PDF</a>
+                    <a href="/pdf-to-jpg">PDF to JPG</a>
                     <a href="/html-to-pdf">HTML to PDF</a>
                 </div>
                 <div class="footer-links-col">
                     <div class="footer-col-title">Security</div>
-                    <a href="/protect-pdf">Protect PDF</a>
-                    <a href="/unlock_pdf">Unlock PDF</a>
-                    <a href="/pdf_add_watermark">Watermark</a>
+                    <a href="/protect">Protect PDF</a>
+                    <a href="/unlock">Unlock PDF</a>
+                    <a href="/watermark">Watermark</a>
                 </div>
             </div>
         </div>
