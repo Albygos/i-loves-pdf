@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /uploads/
+Disallow: /processed/
+Disallow: /api/
+Sitemap: https://ilovespdfs.in/sitemap.xml

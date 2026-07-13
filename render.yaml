@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: ilovespdfs
+    env: python
+    region: ohio
+    plan: starter # Change to free if you want the free tier
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn app:app --workers 4 --timeout 120"
+    autoDeploy: true
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
