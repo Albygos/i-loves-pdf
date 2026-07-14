@@ -402,7 +402,7 @@ def lang_tool_route(lang, slug):
         return serve_tool_page(slug, lang)
     elif lang in SLUG_TO_FILE:
         return serve_tool_page(lang, None)
-    return "Page not found.", 404
+    return dynamic_seo_page(f"{lang}/{slug}")
 
 def serve_tool_page(slug, lang=None):
     # Backward compatibility redirects
