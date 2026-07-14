@@ -393,7 +393,7 @@ def index_route(lang=None):
     if lang and lang not in SUPPORTED_LANGS:
         if lang in SLUG_TO_FILE:
             return serve_tool_page(lang, None)
-        return "Page not found.", 404
+        return dynamic_seo_page(lang)
     return serve_tool_page('', lang)
 
 @app.route('/<lang>/<slug>')
@@ -1588,7 +1588,7 @@ def dynamic_seo_page(slug):
     file_path = os.path.join(BASE_DIR, 'seo_pages', slug)
     print(f"DEBUG: Fallback to seo_pages path={file_path}, exists={os.path.exists(file_path)}")
     if os.path.exists(file_path):
-        return send_from_directory('seo_pages', slug)
+        return send_from_directory(os.path.join(BASE_DIR, 'seo_pages'), slug)
     
     print("DEBUG: Aborting with 404")
     abort(404)
